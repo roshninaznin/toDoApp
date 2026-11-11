@@ -1,33 +1,15 @@
 import React, { useState } from "react";
 import ToDoItem from "./ToDoItem";
+import Form from "./Form";
+import ToDoListFotItem from "./ToDoListFotItem";
 
 export default function Todo() {
-  const [toDo, setToDo] = useState("");
   const [toDoList, setToDoList] = useState([]);
-
-  function handleChange(e) {
-    setToDo(e.target.value);
-  }
-  function handleSubmit(e) {
-    e.preventDefault();
-    setToDoList([...toDoList, toDo]);
-    setToDo("");
-  }
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <input onChange={(e) => handleChange(e)} type="text" value={toDo} />
-        <button type="Submit">Add</button>
-      </form>
-
-
-
-      {toDoList.map((item) => (
-        <ToDoItem item={item} />
-      ))}{" "}
-
-      
+      <Form toDoList={toDoList} setToDoList={setToDoList} />
+      <ToDoListFotItem toDoList={toDoList} />
     </div>
   );
 }

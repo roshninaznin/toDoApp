@@ -1,29 +1,12 @@
-// import { useState } from "react";
-// import Todo from "./components/Todo";
-// import InlineComponent from "./components/InlineComponent";
-// import OutlineComponent from "./components/OutlineComponent";
+import Header from "./components/Header";
+import "./App.css";
 
-// function App() {
-//   return (
-//     <>
-//       <InlineComponent />
-
-//       <OutlineComponent />
-//       {/* <Todo /> */}
-//     </>
-//   );
-// }
-
-// export default App;
-
-import InlineComponent from "./components/InlineComponent";
-import OutlineComponent from "./components/OutlineComponent";
-
+import Todo from "./components/Todo";
 function App() {
   return (
     <>
-      <OutlineComponent />
-      <InlineComponent />
+      <Header />
+      <Todo />
     </>
   );
 }
